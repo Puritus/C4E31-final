@@ -18,6 +18,22 @@ $(function() {
             preload   : true
         }
     });
+
+    $(".downloadIframe").fancybox({
+        maxWidth    : 900,
+        maxHeight    : 600,
+        fitToView    : false,
+        width        : '90%',
+        height        : '90%',
+        autoSize    : false,
+        closeClick    : false,
+        openEffect    : 'none',
+        closeEffect    : 'none',
+        iframe: {
+            scrolling : 'auto',
+            preload   : true
+        }
+    });    
     
     $('#search-form').submit( function(e) {
         e.preventDefault();
@@ -167,6 +183,7 @@ function getOutput(item) {
                         '</div>' +
                         '<div class="input-group col-md-6">' +
                             '<h3><a data-fancybox-type="iframe" class="fancyboxIframe" href="http://youtube.com/embed/' + videoID + '?rel=0">' + title + '</a></h3>' +
+                            '<h4><a data-fancybox-type="iframe" class="downloadIframe" href="https://recordmp3.co/#/watch?v=' + videoID + '">Download MP3</a></h4>' +
                             '<small>By <span class="channel">' + channelTitle + '</span> on ' + videoDate + '</small>' +
                             '<p>' + description + '</p>' +
                         '</div>' +
